@@ -1,0 +1,17 @@
+:root{
+    --bg-body: #ced3d9;
+}
+
+
+.italiana-h3{
+    font-family: 'italiana';
+}
+
+
+body{
+    background-color: var(--bg-body);
+}
+
+.form-font{
+    font-size: 14px;
+}
