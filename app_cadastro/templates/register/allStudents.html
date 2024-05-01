@@ -1,0 +1,50 @@
+{% extends 'register/base.html' %}
+{% load static %}
+    <title>{% block 'title-page' %} Todos os alunos cadastrados{% endblock %}</title>
+{% block 'ownCSS' %} 
+    <link rel="stylesheet" href="{% static 'css/register-style.css' %}">
+{% endblock %}
+
+                
+{% block 'newHTML' %} 
+<div class="col-10 mt-2">
+    <h4 class="inter">Todos alunos</h4>
+    <p class="inter">Visualize aqui todos os alunos cadastrados na octógono </p>
+    <!-- Tabela de alunos -->
+    <table class="table">
+        <thead>
+          <tr class="italiana">
+            <th scope="col " style="color: #02204A;">ID</th>
+            <th scope="col" style="color: #02204A;">Nome</th>
+            <th scope="col" style="color: #02204A;">Mãe</th>
+            <th scope="col" style="color: #02204A;">C.Mãe</th>
+            <th scope="col" style="color: #02204A;">E.Mãe</th>
+            <th scope="col" style="color: #02204A;">Pai</th>
+            <th scope="col" style="color: #02204A;">C.Pai</th>
+            <th scope="col" style="color: #02204A;">E.Pai</th>
+            <th scope="col" style="color: #02204A;">Turma</th>
+            <th scope="col" style="color: #02204A;">Endereço</th>
+
+          </tr>
+        </thead>
+        <tbody>
+            <!-- Exemplo de aluno -->
+            <!-- Replicar com dados presentes no DB -->
+          {% for aluno in alunos%}
+            <tr class="enriqueta">
+            <th scope="row">{{aluno.id_aluno}}</th>
+            <td>{{aluno.full_name_student}}</td>
+            <td>{{aluno.mom_name}}</td>
+            <td>{{aluno.mom_contact}}</td>
+            <td>{{aluno.mom_email}}</td>
+            <td>{{aluno.father_name}}</td>
+            <td> {{aluno.father_contact}}</td>
+            <td>{{aluno.father_email}}</td>
+            <td>{{aluno.classes}}</td>
+            <td>{{aluno.address}}</td>
+          </tr>
+          {% endfor%}
+        </tbody>
+      </table>
+</div>
+{% endblock %}

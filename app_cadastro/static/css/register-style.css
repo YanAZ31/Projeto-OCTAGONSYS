@@ -1,0 +1,59 @@
+:root{
+    --bg-body: #ced3d9;
+}
+
+.italiana{
+    font-family: 'italiana';
+    
+}
+.italiana h3{
+color: #02204A;
+}
+
+form .italiana {
+font-size: 16px;
+
+}
+.inder{
+    font-family: 'inder';
+    }
+
+body{
+    background-color: var(--bg-body);
+}
+
+.form-font{
+font-size: 14px;
+}
+
+.inter{
+font-family: 'inter';
+font-weight: 300;
+}
+.inder{
+font-family: 'inder';
+}
+.enriqueta{
+font-family: 'enriqueta';
+font-weight: 300;
+}
+.form .enriqueta{
+font-size: 15px;
+}
+thead{
+font-size: 20px;
+font-weight: 400;
+color: #02204A;
+
+}
+tbody .inder{
+font-weight: 400 !important; 
+font-size: 16px;
+}
+.enriqueta{
+    font-family: 'enriqueta';
+    font-weight: 300;
+    }
+    .form .enriqueta{
+    font-size: 15px;
+    }

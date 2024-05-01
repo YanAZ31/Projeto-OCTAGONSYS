@@ -1,0 +1,36 @@
+:root{
+    --bg-body: #ced3d9;
+}
+
+.italiana{
+    font-family: 'italiana';
+    
+}
+.italiana h3{
+color: #02204A;
+}
+
+form .italiana {
+font-size: 16px;
+}
+
+body{
+    background-color: var(--bg-body);
+}
+
+.form-font{
+font-size: 14px;
+}
+
+.inter{
+font-family: 'inter';
+font-weight: 300;
+}
+
+.enriqueta{
+font-family: 'enriqueta';
+font-weight: 300;
+}
+.form .enriqueta{
+font-size: 15px;
+}
