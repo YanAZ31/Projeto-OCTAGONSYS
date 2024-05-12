@@ -1,0 +1,79 @@
+{% extends 'register/base.html' %}
+{% load static %}
+
+{% block 'title-page' %} 
+    Cadastre um novo Aluno
+{% endblock %}
+
+{% block 'ownCSS' %} 
+        <link rel="stylesheet" href="{% static 'css/form.css'%}">
+        
+{% endblock %}
+
+{% block 'newHTML' %} 
+<div class="col-10 mt-2">
+    <h4 class="inter">Cadastre seus alunos aqui</h4>
+    <p class="inter">Digite todas as informações no formulário abaixo </p>
+    <div class="form bg-light">
+        <h3 class="text-primary text-center mt-2 mb-2 italiana">Novo Aluno</h3>
+        <!-- Indicando onde os dados serão direcionados pós submit-->
+        <form action="{% url 'allStudents' %}" method="post" class="p-2 form-font enriqueta">
+            <!-- Criptografa dados do formulário -->
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-2"> <label for="fullName" class="form-label">Nome completo:</label></div>
+                <div class="col-10">
+                    <input type="text" name="fullName" class=" form-control" maxlength="100" required placeholder=" Ex: Edson Arantes do Nascimento">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-6 d-flex ">
+                    <label for="momName" class="col-2 ">Mãe:</label>
+                    <input type="text" name="momName" class="form-control" maxlength="100" required placeholder="Ex: Celeste Arantes">
+                </div>
+                <div class="col-6 d-flex">
+                    <label for="fatherName" class="col-2 ">Pai:</label>
+                    <input type="tel" name="fatherName" class="form-control" maxlength="100"  required placeholder="Ex: João Ramos do Nascimento">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-6 d-flex">
+                    <label for="momContact" class="col-2 ">Contato mãe:</label>
+                    <input type="tel" name="momContact" class="form-control" maxlength="20"   required placeholder="Ex: (67) 3498-3277">
+                </div>
+                <div class="col-6 d-flex">
+                    <label for="fatherContact" class="col-2 ">Contato pai:</label>
+                    <input type="text" name="fatherContact" class="form-control" maxlength="20" required placeholder="Ex: (67) 3942-4257">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-6 d-flex">
+                    <label for="momEmail" class="col-2 ">E-mail mãe:</label>
+                    <input type="text" name="momEmail" class="form-control" maxlength="50" placeholder="Ex: katiuscia1004@uorak.com">
+                </div>
+                <div class="col-6 d-flex">
+                    <label for="fatherEmail" class="col-2 "> E-mail pai:</label>
+                    <input type="text" name="fatherEmail" class="form-control" maxlength="50" placeholder="Ex: tod9574@uorak.com">
+                </div>
+            </div>
+                <div class="row mt-3">
+                    <div class="col-6 d-flex">
+                        <label for="class" class="col-2 ">Turma:</label>
+                        <input type="text" name="classes" class="form-control"  maxlength="3" required placeholder="Ex: A5">
+                    </div>
+                    <div class="col-6 d-flex">
+                        <label for="address" class="col-2 ">Endereço:</label>
+                        <input type="text" name="address" class="form-control" maxlength="250" required placeholder="Ex: Rua Frederico Moura, Cidade Nova, Franca - SP">
+                    </div>
+                </div>
+               
+                <div class="button-form mt-5 text-end">
+                    <input type="submit" value="Cadastrar" class="btn btn-primary" style="background-color: #02204A; border: none;">
+                    <a href="" class="btn btn-outline-primary">Voltar</a>
+                </div>
+            </div>
+           
+        </form>
+    </div>  
+{% endblock %}
+<script src="{% static 'scripts/script.js' %}"></script>

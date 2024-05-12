@@ -1,0 +1,91 @@
+{% extends 'register/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block 'title-page' %} 
+        Página Inicial | Octagonsys
+    {% endblock %}
+</head>
+<body>
+    {% block 'newHTML' %} 
+        <div id="carouselId" class="carousel slide col-10" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li
+                    data-bs-target="#carouselId"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="First slide"
+                ></li>
+                <li
+                    data-bs-target="#carouselId"
+                    data-bs-slide-to="1"
+                    aria-label="Second slide"
+                ></li>
+                <li
+                    data-bs-target="#carouselId"
+                    data-bs-slide-to="2"
+                    aria-label="Third slide"
+                ></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <img
+                        src="https://whitesands.org.ng/wp-content/uploads/2023/12/A2-Banner-IMG_6425-2048x1365.jpg"
+                        class="w-100 d-block"
+                        alt="First slide"
+                    />
+                    <div class="carousel-caption d-none d-md-block bg-dark">
+                        <h5>Cadastre Alunos</h5>
+                        <p>Maneira simples e intuitiva de formar turmas.</p>
+                      </div>
+                </div>
+                <div class="carousel-item">
+                    <img
+                        src="https://www.oakham.rutland.sch.uk/wp-content/uploads/2022/08/MR4_2545.jpg"
+                        class="w-100 d-block"
+                        alt="Second slide"
+                    />
+                    <div class="carousel-caption d-none d-md-block bg-dark">
+                        <h5>Relatórios Personalizados</h5>
+                        <p>Obtenha a frequência de suas turmas de maneira rápida</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img
+                        src="https://www.oakham.rutland.sch.uk/wp-content/uploads/2022/08/0210-DSCF8165-1280x853.jpg"
+                        class="w-100 d-block"
+                        alt="Third slide"
+                    />
+                    <div class="carousel-caption d-none d-md-block bg-dark">
+                        <h5>Novas Atualizações em breve!</h5>
+                        <p>Estamos fequentemente atualizando o sistema e trazendo novas funcionalidades</p>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselId"
+                data-bs-slide="prev"
+            >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselId"
+                data-bs-slide="next"
+            >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        
+    {% endblock %}
+</body>
+</html>
