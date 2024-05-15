@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from app_cadastro import views
+# from views import salvar
 # Rotas da aplicação
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,5 +29,10 @@ urlpatterns = [
     path('viewStudents/',views.viewStudents,name='viewStudents'),
     path('cadastro-usuario/', views.cadastro, name='cadastro'),
     path('', views.login, name='login'),
-    path('home/', views.login, name='home')
+    path('home/', views.home, name='home'),
+    #Editar
+    path('editar/<int:id>', views.editar, name='editar'),
+    path('update/<int:id>', views.update, name='update'),
+    path('delete/<int:id>', views.delete, name='delete'),
+    path('salvar/', views.salvar ,name='salvar'),
 ]

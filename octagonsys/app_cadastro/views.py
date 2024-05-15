@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 # Trazendo dados para a view
 # from .models import render 
 from .models import Aluno
@@ -77,3 +77,49 @@ def home(request):
     if request.user.is_authentificated:
         return render(request,'register/template-register-students.html')
     return
+
+def editar(request,id):
+    alunos = Aluno.objects.get(id_aluno = id)
+    return render(request,'register/update.html',{"aluno": alunos})
+
+def salvar(request):
+    nome = request.POST.get("full_name_student")
+    Aluno.objects.create(full_name_student = nome)
+    alunos = Aluno.objects.all()
+    return render(request, "register/allStudents.html", {"alunos":alunos})
+
+def update(request,id):
+    # Aluno.objects.create(full_name_student = nome)
+    # alunos = Aluno.objects.all()
+    aluno = Aluno.objects.get(id_aluno = id)
+
+    nome = request.POST.get("full_name_student")
+    mae = request.POST.get("mom_name")
+    pai = request.POST.get("father_name")
+    cmae = request.POST.get("mom_contact")
+    cpai = request.POST.get("father_contact")
+    emae = request.POST.get("mom_email")
+    epai = request.POST.get("father_email")
+    turma = request.POST.get("classes")
+    endereco = request.POST.get("address")
+  
+
+    aluno.full_name_student = nome
+    aluno.mom_name = mae
+    aluno.father_name = pai
+    aluno.mom_contact = cmae
+    aluno.father_contact = cpai
+    aluno.mom_email = emae
+    aluno.classes = turma
+    aluno.address = endereco
+    aluno.father_email = epai
+    aluno.save()
+    return redirect(viewStudents)
+
+def delete(request,id):
+    aluno = Aluno.objects.get(id_aluno = id)
+    aluno.delete()
+    return redirect(viewStudents)
+
+
+

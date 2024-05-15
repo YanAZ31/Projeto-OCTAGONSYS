@@ -22,6 +22,7 @@
             <!-- <th scope="col" style="color: #02204A;">E.Pai</th> -->
             <th scope="col" style="color: #02204A;">Turma</th>
             <th scope="col" style="color: #02204A;">Endereço</th>
+            <th></th>
 
           </tr>
         </thead>
@@ -39,8 +40,8 @@
             <td> {{aluno.father_contact}}</td>
             <!-- <td>{{aluno.father_email}}</td> -->
             <td>{{aluno.classes}}</td>
-            <td>{{aluno.address}} <a href="/edit/{{dbs.aluno.id_aluno}}" class="btn btn-warning">Editar</a> <a href="#" class="btn btn-danger">Excluir</a></td>
-            
+            <td>{{aluno.address}} </td>
+            <td><a href="{% url 'editar' aluno.id_aluno %} "><i class="fa-solid fa-pencil"></i></a> <a href="{% url 'delete' aluno.id_aluno %}" ><i class="fa-solid fa-trash"></i></a></td>
             
 
           </tr>
