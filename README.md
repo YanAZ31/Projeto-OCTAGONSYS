@@ -11,7 +11,8 @@ Projeto de sistema escolar proposto pela matéria de Prática Profissional em An
     python manage.py runserver  
     ~~~~
    Abrir link no browser
-  !![image](https://github.com/YanAZ31/Projeto-OCTAGONSYS/assets/96553364/e236bfe4-c368-403f-9c77-d8849b273596)
+  
+  ![image](https://github.com/YanAZ31/Projeto-OCTAGONSYS/assets/96553364/e236bfe4-c368-403f-9c77-d8849b273596)
 
     ## 🛠️ Construído com
     * Python 3 (Linguagem de programação base)
